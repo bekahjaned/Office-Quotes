@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include the stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Office Quotes</title>
+  </head>
+  <body>
+    <header>
+      <!-- need to change these to something about quotes -->
+      <h1>That's What She Said</h1>
+      <h2>Enter an episode number(between 1 and 6) from The Office, season 1 and a random quote will appear!</h2>
+    </header>
+    <main>
+      <div class="search">
+        <form>
+          <input type="text" class="search-episode" name="search episode number"/>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="results">
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <img src="./images/best-boss.png" alt="World's Best Boss Mug">
+        <div class="scott-quote-box">
+          <p class="scott-quote">"I think that pretty much sums it up."</p>
+          <p class="scott">- Michael Gary Scott</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
