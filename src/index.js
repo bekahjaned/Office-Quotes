@@ -31,12 +31,13 @@ const createCharacters = () => {
 const App = () => {
   return (
     <div>
+      <RateButtons>
         <CharacterCard
           name={createCharacters().name}
           title={createCharacters().title}
           image={createCharacters().image}
         />
-        <RateButtons />
+        </RateButtons>
     </div>
   );
 };
