@@ -12,42 +12,32 @@ import Jim from './images/JimHalpert.png';
 import Oscar from './images/OscarMartinez.jpg';
 import Angela from './images/AngelaMartin.jpg';
 
+const createCharacters = () => {
+  const characters = [
+    { name: "Michael Scott", title: "Regional Manager", image: Michael },
+    { name: "Dwight Schrute", title: "Assistant Regional Manager", image: Dwight },
+    { name: "Pam Beesly", title: "Secretary", image: Pam },
+    { name: "Jim Halpert", title: "Salesman", image: Jim },
+    { name: "Oscar Martinez", title: "Accountant", image: Oscar },
+    { name: "Angela Martin", title: "Accountant", image: Angela }
+  ];
+
+  for(let character of characters) {
+    const { name, title, image } = character;
+    return character;
+  };
+}
 
 const App = () => {
   return (
-    <div className="ui three cards">
-    <RateButtons>
-      <CharacterCard
-        character="Michael Scott"
-        title="Regional Manager"
-        image={Michael}
-      />
-    </RateButtons>
-      <CharacterCard
-        character="Dwight Schrute"
-        title="Salesman"
-        image={Dwight}
-      />
-      <CharacterCard
-        character="Pam Beesly"
-        title="Secretary"
-        image={Pam}
-      />
-      <CharacterCard
-        character="Jim Halpert"
-        title="Salesman"
-        image={Jim}
-      />
-      <CharacterCard
-        character="Oscar Martinez"
-        title="Accountant"
-        image={Oscar}
-      />
-      <CharacterCard
-        character="Angela Martin"
-        title="Accountant"
-        image={Angela}
-      />
+    <div>
+      <RateButtons>
+        <CharacterCard
+          name={createCharacters().name}
+          title={createCharacters().title}
+          image={createCharacters().image}
+        />
+      </RateButtons>
     </div>
   );
 };
