@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RateButtons = (props) => {
+const ButtonCard = (props) => {
   return (
     <div className="ui card">
       <div className="content">{props.children}</div>
@@ -14,4 +14,4 @@ const RateButtons = (props) => {
   );
 };
 
-export default RateButtons;
+export default ButtonCard;

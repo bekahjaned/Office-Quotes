@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import CharacterCard from './CharacterCard';
-import RateButtons from './RateButtons'
+import ButtonCard from './ButtonCard'
 
 
 import Michael from './images/MichaelScott.png';
@@ -25,25 +25,27 @@ class App extends React.Component {
       { name: "Jim Halpert", title: "Salesman", image: Jim },
       { name: "Oscar Martinez", title: "Accountant", image: Oscar },
       { name: "Angela Martin", title: "Accountant", image: Angela }
-    ] };
+    ] 
+    };
 
+  
+
+    // this.characters = this.state.char.map(character => {
+    //   const { name, title, image } = character;
+    // })
   }
   
   render () {
-    console.log(this.state)
-
+    console.log(this.state.char[0])
     return (
-      
       <div>
-        {/* const makeCharacter = characters.map(character => { */}
-          <RateButtons>
-            <CharacterCard
-              name={ this.state.char[0].name }
-              title={ this.state.char[0].title }
-              image={ this.state.char[0].image }
-            />
-          </RateButtons>
-        {/* // }); */}
+        <ButtonCard>
+          <CharacterCard
+            name={ this.state.char[0].name }
+            title={ this.state.char[0].title }
+            image={ this.state.char[0].image }
+          />
+        </ButtonCard> 
       </div>
     )
   }
