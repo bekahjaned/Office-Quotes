@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import CharacterCard from './CharacterCard';
-import ButtonCard from './ButtonCard'
+// import ButtonCard from './ButtonCard'
 
 
 import Michael from './images/MichaelScott.png';
@@ -18,34 +18,28 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { char: [
-      { name: "Michael Scott", title: "Regional Manager", image: Michael },
-      { name: "Dwight Schrute", title: "Assistant Regional Manager", image: Dwight },
-      { name: "Pam Beesly", title: "Secretary", image: Pam },
-      { name: "Jim Halpert", title: "Salesman", image: Jim },
-      { name: "Oscar Martinez", title: "Accountant", image: Oscar },
-      { name: "Angela Martin", title: "Accountant", image: Angela }
-    ] 
+    this.state = { characters: [
+        { name: "Michael Scott", title: "Regional Manager", image: Michael },
+        { name: "Dwight Schrute", title: "Assistant Regional Manager", image: Dwight },
+        { name: "Pam Beesly", title: "Secretary", image: Pam },
+        { name: "Jim Halpert", title: "Salesman", image: Jim },
+        { name: "Oscar Martinez", title: "Accountant", image: Oscar },
+        { name: "Angela Martin", title: "Accountant", image: Angela }
+      ] 
     };
 
-  
-
-    // this.characters = this.state.char.map(character => {
-    //   const { name, title, image } = character;
-    // })
   }
   
   render () {
-    console.log(this.state.char[0])
+
     return (
-      <div>
-        <ButtonCard>
-          <CharacterCard
-            name={ this.state.char[0].name }
-            title={ this.state.char[0].title }
-            image={ this.state.char[0].image }
+      <div className="ui three cards">
+        {this.state.characters.map((character) => {
+          return <CharacterCard 
+            character={character}
+            key={character.name}
           />
-        </ButtonCard> 
+        })}
       </div>
     )
   }
