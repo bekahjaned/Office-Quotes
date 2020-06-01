@@ -1,4 +1,5 @@
 import React from 'react';
+import QuoteButton from './QuoteButton'
 
 class CharacterCard extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class CharacterCard extends React.Component {
           {this.props.character.title}
         </div>
       </div>
+      <QuoteButton />
     </div>
     )
   }
