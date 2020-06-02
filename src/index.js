@@ -10,7 +10,7 @@ import Jim from './images/JimHalpert.png';
 import Oscar from './images/OscarMartinez.jpg';
 import Angela from './images/AngelaMartin.jpg';
 
-import quotes from './quotes.json';
+
 
 
 class App extends React.Component {
@@ -30,7 +30,6 @@ class App extends React.Component {
   }
   
   render () {
-    console.log(quotes[0].author)
     return (
       <div className="ui three cards">
         {this.state.characters.map((character) => {
