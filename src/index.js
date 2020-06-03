@@ -11,8 +11,6 @@ import Oscar from './images/OscarMartinez.jpg';
 import Angela from './images/AngelaMartin.jpg';
 
 
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +24,6 @@ class App extends React.Component {
         { name: "Angela Martin", title: "Accountant", image: Angela }
       ] 
     };
-
   }
   
   render () {

@@ -3,16 +3,16 @@ import React from 'react';
 import quotes from './quotes.json';
 
 class CharacterCard extends React.Component {
-  render() {
 
-    function getQuote() {
-      quotes.sort(() => Math.random() - 0.5)
-      quotes.map((quote) => {
-        if(quote.author === "Michael Scott"){
-          alert(quote.quote) 
-        }
-      })
+  getQuote(name){
+    const getQuotes = quotes[name];
+    if(getQuotes != undefined){
+      const quote = getQuotes[0];
+      alert(quote);
     }
+  }
+
+  render() {  
 
     return (
       <div className="ui card">
@@ -27,7 +27,7 @@ class CharacterCard extends React.Component {
           {this.props.character.title}
         </div>
       </div>
-      <button className="ui teal button" onClick={getQuote}>
+      <button className="ui teal button" onClick={() => this.getQuote(this.props.character.name)}>
         Beer Me That Quote
       </button>
     </div>
