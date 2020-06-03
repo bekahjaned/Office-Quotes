@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import CharacterCard from './CharacterCard';
-import RateButtons from './RateButtons'
+// import ButtonCard from './ButtonCard'
 
 
 import Michael from './images/MichaelScott.png';
@@ -11,36 +11,39 @@ import Pam from './images/PamBeesly.png';
 import Jim from './images/JimHalpert.png';
 import Oscar from './images/OscarMartinez.jpg';
 import Angela from './images/AngelaMartin.jpg';
+// import quotes from './quotes.js';
 
-const createCharacters = () => {
-  const characters = [
-    { name: "Michael Scott", title: "Regional Manager", image: Michael },
-    { name: "Dwight Schrute", title: "Assistant Regional Manager", image: Dwight },
-    { name: "Pam Beesly", title: "Secretary", image: Pam },
-    { name: "Jim Halpert", title: "Salesman", image: Jim },
-    { name: "Oscar Martinez", title: "Accountant", image: Oscar },
-    { name: "Angela Martin", title: "Accountant", image: Angela }
-  ];
 
-  for(let character of characters) {
-    const { name, title, image } = character;
-    return character;
-  };
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { characters: [
+        { name: "Michael Scott", title: "Regional Manager", image: Michael },
+        { name: "Dwight Schrute", title: "Assistant Regional Manager", image: Dwight },
+        { name: "Pam Beesly", title: "Secretary", image: Pam },
+        { name: "Jim Halpert", title: "Salesman", image: Jim },
+        { name: "Oscar Martinez", title: "Accountant", image: Oscar },
+        { name: "Angela Martin", title: "Accountant", image: Angela }
+      ] 
+    };
+
+  }
+  
+  render () {
+
+    return (
+      <div className="ui three cards">
+        {this.state.characters.map((character) => {
+          return <CharacterCard 
+            character={character}
+            key={character.name}
+          />
+        })}
+      </div>
+    )
+  }
 }
-
-const App = () => {
-  return (
-    <div>
-        <CharacterCard
-          name={createCharacters().name}
-          title={createCharacters().title}
-          image={createCharacters().image}
-        />
-        <RateButtons />
-    </div>
-  );
-};
-
 
 ReactDOM.render(
   <App />,

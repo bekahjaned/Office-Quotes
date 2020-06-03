@@ -1,22 +1,24 @@
 import React from 'react';
 
-
-const CharacterCard = (props) => {
-  return (
-    <div className="ui card">
+class CharacterCard extends React.Component {
+  render() {
+    return (
+      <div className="ui card">
       <img className="ui medium rounded image"
-        src={props.image} alt="character"
+        src={this.props.character.image} alt="character"
       />
       <div className="content">
         <a href="/" className="header">
-          {props.name}
+          {this.props.character.name}
         </a>
         <div className="description">
-          {props.title}
+          {this.props.character.title}
         </div>
       </div>
     </div>
-  );
-};
+    )
+  }
+}
+
 
 export default CharacterCard;
