@@ -6,9 +6,12 @@ class CharacterCard extends React.Component {
 
   getQuote(name){
     const getQuotes = quotes[name];
-    if(getQuotes != undefined){
-      const quote = getQuotes[0];
+    const numberOfQuotes = getQuotes.length
+    if(getQuotes !== undefined){
+      const num = Math.floor(Math.random() * numberOfQuotes + 1);
+      const quote = getQuotes[num];
       alert(quote);
+      
     }
   }
 
