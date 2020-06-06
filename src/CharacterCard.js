@@ -3,15 +3,19 @@ import React from 'react';
 import quotes from './quotes.json';
 
 class CharacterCard extends React.Component {
+  constructor(){
+    super();
 
+    this.state = { display: "" }
+  }
+  
   getQuote(name){
     const getQuotes = quotes[name];
     const numberOfQuotes = getQuotes.length
     if(getQuotes !== undefined){
-      const num = Math.floor(Math.random() * numberOfQuotes + 1);
+      const num = Math.floor(Math.random() * numberOfQuotes);
       const quote = getQuotes[num];
-      alert(quote);
-      
+      this.setState({ display: quote });
     }
   }
 
@@ -26,8 +30,11 @@ class CharacterCard extends React.Component {
         <a href="/" className="header">
           {this.props.character.name}
         </a>
-        <div className="description">
+        <div className="meta">
           {this.props.character.title}
+        </div>
+        <div className="description">
+          { this.state.display }
         </div>
       </div>
       <button className="ui teal button" onClick={() => this.getQuote(this.props.character.name)}>
