@@ -1,5 +1,4 @@
 import React from 'react';
-// import QuoteButton from './QuoteButton'
 import quotes from './quotes.json';
 
 class CharacterCard extends React.Component {
