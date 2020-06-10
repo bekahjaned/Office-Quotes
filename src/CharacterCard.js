@@ -11,14 +11,21 @@ class CharacterCard extends React.Component {
   getQuote(name){
     const getQuotes = quotes[name];
     const numberOfQuotes = getQuotes.length
-    if(getQuotes !== undefined){
+    if(!!getQuotes){
       const num = Math.floor(Math.random() * numberOfQuotes);
       const quote = getQuotes[num];
       this.setState({ display: quote });
     }
+    else {
+      alert("There are no quotes")
+    }
   }
 
   render() {  
+
+    const {
+      character: { name }
+    } = this.props;
 
     return (
       <div className="ui card">
@@ -36,7 +43,7 @@ class CharacterCard extends React.Component {
           { this.state.display }
         </div>
       </div>
-      <button className="ui teal button" onClick={() => this.getQuote(this.props.character.name)}>
+      <button className="ui teal button" onClick={() => this.getQuote(name)}>
         Beer Me That Quote
       </button>
     </div>
