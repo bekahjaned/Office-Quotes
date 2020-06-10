@@ -1,5 +1,6 @@
 import React from 'react';
 import quotes from './quotes.json';
+import QuoteButton from './QuoteButton';
 
 class CharacterCard extends React.Component {
   constructor(){
@@ -17,7 +18,7 @@ class CharacterCard extends React.Component {
       this.setState({ display: quote });
     }
     else {
-      alert("There are no quotes")
+      alert("Hmmm... I can't find any quotes.")
     }
   }
 
@@ -43,9 +44,10 @@ class CharacterCard extends React.Component {
           { this.state.display }
         </div>
       </div>
-      <button className="ui teal button" onClick={() => this.getQuote(name)}>
-        Beer Me That Quote
-      </button>
+      <QuoteButton 
+        getQuote={() => this.getQuote(name)}
+        buttonText="Beer Me That Quote"
+      />
     </div>
     )
   }
