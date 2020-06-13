@@ -1,6 +1,6 @@
 @mixin flexCenter($direction) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: $direction;
 }
 
@@ -15,6 +15,7 @@ div.card {
     border: 1px solid grey;
     border-radius: $roundedBorder;
     width: $width;
+    height: 100%;
     margin: 25px 12.5px 12.5px 25px;
     color: $darkText;
 }
@@ -56,5 +57,7 @@ button {
     cursor: pointer;
 }
 
-
-
+.cardGrid {
+    @include flexCenter(row);
+    flex-wrap: wrap;
+}
