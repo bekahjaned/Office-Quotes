@@ -16,7 +16,7 @@ div.card {
     border-radius: $roundedBorder;
     width: $width;
     margin: 25px 12.5px 12.5px 25px;
-    color: $greyText;
+    color: $darkText;
 }
 
 img.character {
@@ -45,6 +45,15 @@ div.content {
     padding: 5px;
     font-family: $subText;
     font-size: 8pt;
+}
+
+button {
+    background-color: #00AFB5;
+    color: white;
+    font-family: $mainText;
+    border: none;
+    height: 30px;
+    cursor: pointer;
 }
 
 

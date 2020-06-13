@@ -43,4 +43,13 @@ div.content {
   font-family: "Open Sans", sans-serif;
   font-size: 8pt;
 }
+
+button {
+  background-color: #00AFB5;
+  color: white;
+  font-family: "Noto Serif", serif;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=styles.css.map */
