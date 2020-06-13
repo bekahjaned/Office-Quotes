@@ -1,0 +1,49 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: $direction;
+}
+
+$greyText: grey;
+$mainText: 'Noto Serif', serif;
+$subText: 'Open Sans', sans-serif;
+$width: 250px;
+
+div.card {
+    @include flexCenter(column); 
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: $width;
+    margin: 25px 12.5px 12.5px 25px;
+    color: $greyText;
+}
+
+img.character {
+    width: $width;
+    border-radius: 5px;
+}
+
+div.content {
+    padding: 10px;
+}
+
+.header {
+    color: $greyText;
+    text-decoration: none;
+    font-family: $mainText;
+}
+
+.meta {
+    font-family: $subText;
+    color: $greyText;
+    font-size: 10pt;
+}
+
+.description {
+    padding: 5px;
+    font-family: $subText;
+    font-size: 8pt;
+}
+
+
+

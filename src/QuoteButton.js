@@ -1,10 +1,6 @@
 import React from 'react';
 
 class QuoteButton extends React.Component {
-  constructor(){
-    super();
-
-  }
 
   render() {
     return (
