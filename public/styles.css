@@ -13,7 +13,7 @@ div.card {
   border-radius: 5px;
   width: 250px;
   margin: 25px 12.5px 12.5px 25px;
-  color: grey;
+  color: #313638;
 }
 
 img.character {
@@ -26,18 +26,19 @@ div.content {
 }
 
 .header {
-  color: grey;
+  color: #313638;
   text-decoration: none;
   font-family: "Noto Serif", serif;
 }
 
 .meta {
   font-family: "Open Sans", sans-serif;
-  color: grey;
+  color: #313638;
   font-size: 10pt;
 }
 
 .description {
+  color: grey;
   padding: 5px;
   font-family: "Open Sans", sans-serif;
   font-size: 8pt;

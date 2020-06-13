@@ -4,15 +4,16 @@
     flex-direction: $direction;
 }
 
-$greyText: grey;
+$darkText: #313638;
 $mainText: 'Noto Serif', serif;
 $subText: 'Open Sans', sans-serif;
 $width: 250px;
+$roundedBorder: 5px;
 
 div.card {
     @include flexCenter(column); 
     border: 1px solid grey;
-    border-radius: 5px;
+    border-radius: $roundedBorder;
     width: $width;
     margin: 25px 12.5px 12.5px 25px;
     color: $greyText;
@@ -20,7 +21,7 @@ div.card {
 
 img.character {
     width: $width;
-    border-radius: 5px;
+    border-radius: $roundedBorder;
 }
 
 div.content {
@@ -28,18 +29,19 @@ div.content {
 }
 
 .header {
-    color: $greyText;
+    color: $darkText;
     text-decoration: none;
     font-family: $mainText;
 }
 
 .meta {
     font-family: $subText;
-    color: $greyText;
+    color: $darkText;
     font-size: 10pt;
 }
 
 .description {
+    color: grey;
     padding: 5px;
     font-family: $subText;
     font-size: 8pt;
