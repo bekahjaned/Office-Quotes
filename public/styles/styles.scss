@@ -1,3 +1,5 @@
+@import "./hover";
+
 @mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
@@ -49,10 +51,13 @@ div.content {
 }
 
 button {
+    @include bubble-top();
     background-color: #00AFB5;
     color: white;
     font-family: $mainText;
     border: none;
+    outline: none;
+    margin: 0;
     height: 30px;
     cursor: pointer;
 }
