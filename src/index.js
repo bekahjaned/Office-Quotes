@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CharacterCard from './CharacterCard';
+import CharacterCard from './Components/Cards/CharacterCard';
 
 import Michael from './images/MichaelScott.png';
 import Dwight from './images/DwightSchrute.png';
