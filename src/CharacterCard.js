@@ -29,8 +29,8 @@ class CharacterCard extends React.Component {
     } = this.props;
 
     return (
-      <div className="ui card">
-      <img className="ui medium rounded image"
+      <div className="card">
+      <img className="character"
         src={this.props.character.image} alt="character"
       />
       <div className="content">

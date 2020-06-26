@@ -40,7 +40,7 @@ class App extends React.Component {
   
   render () {
     return (
-      <div className="ui three cards">
+      <div className="cardGrid">
         {this.state.characters.map((character) => {
           return <CharacterCard 
             character={character}

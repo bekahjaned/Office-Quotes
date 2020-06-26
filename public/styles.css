@@ -1,0 +1,71 @@
+div.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 250px;
+  height: 100%;
+  margin: 25px 12.5px 12.5px 25px;
+  color: #313638;
+}
+
+img.character {
+  width: 250px;
+  border-radius: 5px;
+}
+
+div.content {
+  padding: 10px;
+}
+
+.header {
+  color: #313638;
+  text-decoration: none;
+  font-family: "Noto Serif", serif;
+}
+
+.meta {
+  font-family: "Open Sans", sans-serif;
+  color: #313638;
+  font-size: 10pt;
+}
+
+.description {
+  color: grey;
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 8pt;
+}
+
+button {
+  background-color: #00AFB5;
+  color: white;
+  font-family: "Noto Serif", serif;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+}
+
+.cardGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=styles.css.map */
